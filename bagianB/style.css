@@ -1,0 +1,259 @@
+/* style.css - Proyek Mini Bagian B: Galeri Wisata Provinsi Gorontalo
+   Tema: warna adat Gorontalo (hijau, emas, marun) dengan latar krem hangat */
+
+:root {
+    --hijau: #0b5d4b;
+    --hijau-tua: #07392f;
+    --hijau-muda: #e3f1ec;
+    --emas: #e0a526;
+    --marun: #8c1c3b;
+    --krem: #fbf7ee;
+    --teks: #2b2b2b;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+    background-color: var(--krem);
+    color: var(--teks);
+    padding-top: 66px; /* jarak agar konten tidak tertutup navbar fixed-top */
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+h1, h2, h3, .brand-title {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.ikon-emas {
+    color: var(--emas);
+}
+
+/* Navbar */
+.custom-navbar {
+    background: rgba(7, 57, 47, 0.96) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 3px solid var(--emas);
+}
+
+.brand-title {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.custom-navbar .nav-link {
+    font-weight: 500;
+    padding: 0.6rem 1rem;
+    transition: color 0.2s ease;
+}
+
+.custom-navbar .nav-link:hover {
+    color: var(--emas);
+}
+
+/* Hero banner */
+.hero-section {
+    background: linear-gradient(rgba(7, 30, 40, 0.45), rgba(7, 30, 40, 0.7)), url('hero.svg');
+    background-size: cover;
+    background-position: center;
+    min-height: 480px;
+    padding: 3rem 1rem;
+}
+
+.hero-section h1,
+.hero-section .lead {
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+.modal-header-hijau .modal-title {
+    color: #fff;
+}
+
+.hero-subjudul {
+    color: var(--emas);
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.search-bar-group {
+    background: white;
+    border-radius: 50px;
+    overflow: hidden;
+    padding: 4px;
+}
+
+.search-bar-group .form-control:focus {
+    box-shadow: none;
+}
+
+/* Judul bagian */
+.judul-bagian {
+    color: var(--hijau);
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.bagian-galeri .judul-bagian::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: var(--emas);
+    border-radius: 2px;
+    margin: 8px auto 0;
+}
+
+/* Bagian galeri */
+.bagian-galeri {
+    background-color: var(--krem);
+}
+
+/* Kartu destinasi */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 0;
+}
+
+.kartu-destinasi {
+    box-shadow: 0 2px 10px rgba(7, 57, 47, 0.1);
+}
+
+.kartu-destinasi:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(7, 57, 47, 0.2);
+}
+
+.kartu-destinasi img {
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.kartu-destinasi:hover img {
+    transform: scale(1.06);
+}
+
+.nama-destinasi {
+    color: var(--hijau-tua);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+/* Badge kategori */
+.badge-kategori,
+.badge-kat {
+    color: #fff;
+    font-weight: 600;
+}
+
+.kat-Bahari { background-color: #0f7ea3; }
+.kat-Budaya { background-color: var(--marun); }
+.kat-Alam { background-color: #3c8a3f; }
+.kat-Pegunungan { background-color: #8a5a2b; }
+
+/* Tombol */
+.btn-hijau {
+    background-color: var(--hijau);
+    border-color: var(--hijau);
+    color: #fff;
+    transition: all 0.2s ease;
+}
+
+.btn-hijau:hover,
+.btn-hijau:focus {
+    background-color: var(--hijau-tua);
+    border-color: var(--hijau-tua);
+    color: var(--emas);
+}
+
+.btn-outline-hijau {
+    border: 2px solid var(--hijau);
+    color: var(--hijau);
+    background: transparent;
+}
+
+.btn-outline-hijau:hover {
+    background-color: var(--hijau);
+    color: #fff;
+}
+
+/* Filter kategori */
+.filter-btn {
+    font-weight: 600;
+    border: 2px solid var(--hijau);
+    color: var(--hijau);
+    background: #fff;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--hijau-muda);
+    color: var(--hijau-tua);
+}
+
+.filter-btn.active {
+    background-color: var(--hijau);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(11, 93, 75, 0.35);
+}
+
+/* Form buku tamu */
+.bagian-tamu {
+    background-color: var(--hijau-muda);
+}
+
+.kartu-form {
+    border-radius: 20px;
+    box-shadow: 0 8px 28px rgba(7, 57, 47, 0.15);
+}
+
+.form-control:focus {
+    border-color: var(--hijau);
+    box-shadow: 0 0 0 0.2rem rgba(11, 93, 75, 0.2);
+}
+
+/* Modal */
+.modal-header-hijau {
+    background: linear-gradient(90deg, var(--hijau-tua), var(--hijau));
+    border-bottom: 3px solid var(--emas);
+}
+
+.gambar-modal {
+    height: 280px;
+    object-fit: cover;
+}
+
+.harga-modal {
+    color: var(--hijau);
+    font-size: 1.05rem;
+}
+
+/* Footer */
+.footer-gorontalo {
+    background-color: var(--hijau-tua);
+    border-top: 4px solid var(--emas);
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 767px) {
+    .hero-section {
+        min-height: 420px;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .kartu-destinasi img {
+        height: 200px;
+    }
+}
